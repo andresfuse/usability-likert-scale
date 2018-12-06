@@ -8,21 +8,21 @@
     height = 150;
   
   /* Data Loading */
-  d3.csv("./data/results-easiness.csv", function (err, data) {
+  d3.csv("./results-easiness.csv", function (err, data) {
     if (err) throw err;
     
     drawLikertChart( data, "easiness", [ "Significantly hard", "Hard", "Somewhat hard", "Equal", "Somewhat easy", "Easy", "Significantly easy" ] );    
     
   });
 
-  d3.csv("./data/results-usefulness.csv", function (err, data) {
+  d3.csv("./results-usefulness.csv", function (err, data) {
     if (err) throw err;
     
     drawLikertChart( data, "usefulness", [ "Significantly useless", "Useless", "Somewhat useless", "Equal", "Somewhat useful", "Useful", "Significantly useful" ] );    
     
   });
 
-  d3.csv("./data/results-satisfaction.csv", function (err, data) {
+  d3.csv("./results-satisfaction.csv", function (err, data) {
     if (err) throw err;
     
     drawLikertChart( data, "satisfaction", [ "Significantly dissatisfied", "Dissatisfied", "Somewhat dissatisfied", "Equal", "Somewhat satisfied", "Satisfied", "Significantly satisfied" ] );    
